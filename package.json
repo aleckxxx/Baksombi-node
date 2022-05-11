@@ -1,7 +1,7 @@
 {
   "name": "baksombi-node",
   "engines": {
-    "node": "14.5.4"
+    "node": "14.5"
   },
   "version": "1.0.0",
   "description": "",
