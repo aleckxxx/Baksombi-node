@@ -2,15 +2,23 @@
 
 ## Getting started
 
+Edit env file :
+
+```bash
+$ cp .env.example .env
+```
+
 Install dependencies :
+
 ```bash
 $ yarn install
 ```
 
 Edit `docker-compose.yml` file to your likings :
+
 ```yml
 version: '3'
-  
+
 services:
   mongodb:
     image: mongo:latest
@@ -23,8 +31,8 @@ volumes:
   dbdata:
 ```
 
-**Important !!! :** The mongodb service name must refers to the `MONGODB_URL` in the `.env`
- file.
+**IMPORTANT !!! :** The mongodb service must refers to the `MONGODB_URL` environenment variable.
+file.
 
 Start the database :
 
@@ -40,9 +48,9 @@ $ yarn dev
 
 ## Feature roadmap
 
- - [x] Auth routes :
-	 - [x] `/v1/auth/register`
-	 - [x] `/v1/auth/login`
-	 - [x] `/v1/auth/logout`
-	 - [x] `/v1/auth/refresh-tokens`
- - [] ....
+- [x] Auth routes :
+  - [x] `/v1/auth/register`
+  - [x] `/v1/auth/login`
+  - [x] `/v1/auth/logout`
+  - [x] `/v1/auth/refresh-tokens`
+- [] ....
