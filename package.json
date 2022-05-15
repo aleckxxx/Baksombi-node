@@ -11,6 +11,8 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.js",
     "prettier:fix": "prettier --write **/*.js",
+    "db:start": "docker compose up -d",
+    "db:stop": "docker compose down",
     "prepare": "husky install"
   },
   "dependencies": {
