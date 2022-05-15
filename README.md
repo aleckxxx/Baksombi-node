@@ -37,7 +37,7 @@ file.
 Start the database :
 
 ```bash
-$ sudo docker compose up -d
+$ sudo yarn db:start
 ```
 
 Start the Node server in development mode :
