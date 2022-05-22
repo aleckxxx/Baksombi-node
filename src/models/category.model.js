@@ -3,28 +3,33 @@ const { toJSON, paginate } = require('./plugins');
 
 const categorySchema = mongoose.Schema(
   {
-    name: {
+    imgURL: {
+      type: String,
+      required: true,
+    },
+    enName: {
       type: String,
       required: true,
       index: true,
       unique: true,
     },
+    frName: {
+      type: String,
+      required: true,
+      index: true,
+      unique: true,
+    },
+    animals: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Animal',
+      },
+    ],
   },
   {
     timestamps: true,
   }
 );
-
-/**
- * Check if name is taken
- * @param {string} name - The user's name
- * @param {ObjectId} [excludeUserId] - The id of the user to be excluded
- * @returns {Promise<boolean>}
- */
-categorySchema.statics.isNameTaken = async function (name, excludeUserId) {
-  const category = await this.findOne({ name, _id: { $ne: excludeUserId } });
-  return !!category;
-};
 
 categorySchema.plugin(toJSON);
 categorySchema.plugin(paginate);
