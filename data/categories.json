@@ -1,0 +1,22 @@
+[
+  {
+    "enName": "Mammals",
+    "frName": "Mammifères",
+    "imgURL": "https://ik.imagekit.io/baks/mamals_DbQJM7Q_Z.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653228209622"
+  },
+  {
+    "enName": "Fishes",
+    "frName": "Poissons",
+    "imgURL": "https://ik.imagekit.io/baks/fishes_KaG2jzqvP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653229450800"
+  },
+  {
+    "enName": "Amphibians",
+    "frName": "Amphibiens",
+    "imgURL": "https://ik.imagekit.io/baks/amphibians_KhbVFT9-p.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653229599757"
+  },
+  {
+    "enName": "Birds",
+    "frName": "Oiseaux",
+    "imgURL": "https://ik.imagekit.io/baks/birds_FomT-2eg6_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653230116518"
+  }
+]
