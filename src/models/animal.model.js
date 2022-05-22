@@ -3,6 +3,10 @@ const { toJSON, paginate } = require('./plugins');
 
 const animalSchema = mongoose.Schema(
   {
+    order: {
+      type: Number,
+      required: true,
+    },
     imgURL: {
       type: String,
       required: true,
@@ -60,6 +64,10 @@ const animalSchema = mongoose.Schema(
       required: true,
       trim: true,
     },
+    categoryId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Category',
+    },
   },
   {
     timestamps: true,
@@ -83,6 +91,6 @@ animalSchema.plugin(paginate);
 /**
  * @typedef Animal
  */
-const Animal = mongoose.model('Animal', animalSchema);
+const Animal = mongoose.model('Animal', animalSchema, 'Animal');
 
 module.exports = Animal;
