@@ -2,11 +2,17 @@ const Joi = require('joi');
 
 const createAnimal = {
   body: Joi.object().keys({
-    name: Joi.string().required(),
-    imageURL: Joi.string().required(),
-    food: Joi.string().required(),
-    home: Joi.string().required(),
-    ovipare: Joi.string().required(),
+    imgURL: Joi.string().required(),
+    enName: Joi.string().required(),
+    frName: Joi.string().required(),
+    enFood: Joi.string().required(),
+    frFood: Joi.string().required(),
+    enHome: Joi.string().required(),
+    frHome: Joi.string().required(),
+    enReproduction: Joi.string().required(),
+    frReproduction: Joi.string().required(),
+    enWikipediaURL: Joi.string().required(),
+    frWikipediaURL: Joi.string().required(),
   }),
 };
 

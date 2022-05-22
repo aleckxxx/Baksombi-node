@@ -3,28 +3,59 @@ const { toJSON, paginate } = require('./plugins');
 
 const animalSchema = mongoose.Schema(
   {
-    name: {
+    imgURL: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    enName: {
       type: String,
       required: true,
       unique: true,
       trim: true,
     },
-    imageURL: {
+    frName: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+    },
+    enFood: {
       type: String,
       required: true,
       trim: true,
     },
-    food: {
+    frFood: {
       type: String,
       required: true,
       trim: true,
     },
-    home: {
+    enHome: {
       type: String,
       required: true,
       trim: true,
     },
-    ovipare: {
+    frHome: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    enReproduction: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    frReproduction: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    enWikipediaURL: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    frWikipediaURL: {
       type: String,
       required: true,
       trim: true,
@@ -42,7 +73,7 @@ const animalSchema = mongoose.Schema(
  * @returns {Promise<boolean>}
  */
 animalSchema.statics.isNameTaken = async function (name, excludeUserId) {
-  const category = await this.findOne({ name, _id: { $ne: excludeUserId } });
+  const category = await this.findOne({ enName: name, frName: name, _id: { $ne: excludeUserId } });
   return !!category;
 };
 
