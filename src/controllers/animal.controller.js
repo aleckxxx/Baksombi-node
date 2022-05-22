@@ -11,9 +11,10 @@ const createAnimal = catchAsync(async (req, res) => {
 
 const getAnimals = catchAsync(async (req, res) => {
   const trim = pick(req.query, ['trim']);
+  const lang = pick(req.query, ['lang']);
   const filter = pick(req.query, ['name']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
-  const result = await animalService.queryAnimals(filter, options, trim.trim);
+  const result = await animalService.queryAnimals(filter, options, trim.trim, lang.lang);
   res.send(result);
 });
 

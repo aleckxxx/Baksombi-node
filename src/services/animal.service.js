@@ -14,23 +14,24 @@ const createAnimal = async (animalBody) => {
   return Animal.create(animalBody);
 };
 
-const queryAnimals = async (filter, options, trim) => {
+const queryAnimals = async (filter, options, trim, lang) => {
   // eslint-disable-next-line prefer-const
   // eslint-disable-next-line security/detect-non-literal-regexp
 
   const name = filter.name ? filter.name : '';
   const regexp = new RegExp(`${name.toLowerCase()}`, 'i');
+  const criteria =
+    lang === 'en'
+      ? {
+          enName: { $regex: regexp },
+        }
+      : {
+          frName: { $regex: regexp },
+        };
 
   let animals = await Animal.find(
     {
-      $or: [
-        {
-          enName: { $regex: regexp },
-        },
-        {
-          frName: { $regex: regexp },
-        },
-      ],
+      $or: [criteria],
     },
     options
   );
