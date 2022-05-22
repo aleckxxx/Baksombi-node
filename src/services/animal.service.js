@@ -19,6 +19,7 @@ const queryAnimals = async (filter, options, trim) => {
   // eslint-disable-next-line security/detect-non-literal-regexp
 
   const name = filter.name ? filter.name : '';
+  // eslint-disable-next-line security/detect-non-literal-regexp
   const regexp = new RegExp(`${name.toLowerCase()}`, 'i');
 
   let animals = await Animal.find(
