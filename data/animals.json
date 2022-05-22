@@ -1,0 +1,47 @@
+[
+  {
+    "order": 1,
+    "imgURL": "https://ik.imagekit.io/baks/wolf_1N1srw1H5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653231117700",
+    "enName": "Wolf",
+    "frName": "Loup",
+    "enHome": "Forest",
+    "frHome": "Foret",
+    "enFood": "meat",
+    "frFood": "steak",
+    "enReproduction": "childbirth",
+    "frReproduction": "accouchement",
+    "frWikipediaURL": "https://fr.wikipedia.org/wiki/Canis_lupus",
+    "enWikipediaURL": "https://en.wikipedia.org/wiki/Wolf",
+    "categoryId": "628a7003200cd2c684c798f2"
+  },
+  {
+    "order": 2,
+    "imgURL": "https://ik.imagekit.io/baks/wolf_1N1srw1H5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653231117700",
+    "enName": "Cow",
+    "frName": "Vache",
+    "enHome": "Farm",
+    "frHome": "Ferme",
+    "enFood": "Grass",
+    "frFood": "Herbe",
+    "enReproduction": "childbirth",
+    "frReproduction": "accouchement",
+    "frWikipediaURL": "https://fr.wikipedia.org/wiki/Vache",
+    "enWikipediaURL": "https://en.wikipedia.org/wiki/Cow",
+    "categoryId": "628a7003200cd2c684c798f2"
+  },
+  {
+    "order": 3,
+    "imgURL": "https://ik.imagekit.io/baks/girafe_3Jt5nwuxi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653238543819",
+    "enName": "Giraffe",
+    "frName": "Girafe",
+    "enHome": "Savannah",
+    "frHome": "Savane",
+    "enFood": "Leafs",
+    "frFood": "Feuilles",
+    "enReproduction": "childbirth",
+    "frReproduction": "accouchement",
+    "frWikipediaURL": "https://fr.wikipedia.org/wiki/Girafe",
+    "enWikipediaURL": "https://en.wikipedia.org/wiki/Giraffe",
+    "categoryId": "628a7003200cd2c684c798f2"
+  }
+]

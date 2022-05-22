@@ -20,7 +20,7 @@ const queryCategories = async (filter, options) => {
  * @returns {Promise<User>}
  */
 const getCategoryById = async (id) => {
-  return Category.findById(id);
+  return Category.findById(id).populate('animals');
 };
 
 module.exports = {
