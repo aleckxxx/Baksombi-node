@@ -14,17 +14,29 @@ const createAnimal = async (animalBody) => {
   return Animal.create(animalBody);
 };
 
-/**
- * Query for animals
- * @param {Object} filter - Mongo filter
- * @param {Object} options - Query options
- * @param {string} [options.sortBy] - Sort option in the format: sortField:(desc|asc)
- * @param {number} [options.limit] - Maximum number of results per page (default = 10)
- * @param {number} [options.page] - Current page (default = 1)
- * @returns {Promise<QueryResult>}
- */
-const queryAnimals = async (filter, options) => {
-  const animals = await Animal.paginate(filter, options);
+const queryAnimals = async (filter, options, trim) => {
+  // eslint-disable-next-line prefer-const
+  // eslint-disable-next-line security/detect-non-literal-regexp
+
+  const name = filter.name ? filter.name : '';
+  const regexp = new RegExp(`${name.toLowerCase()}`, 'i');
+
+  let animals = await Animal.find(
+    {
+      $or: [
+        {
+          enName: { $regex: regexp },
+        },
+        {
+          frName: { $regex: regexp },
+        },
+      ],
+    },
+    options
+  );
+  if (trim) {
+    animals = animals.map((animal) => ({ enName: animal.enName, frName: animal.frName, imgURL: animal.imgURL }));
+  }
   return animals;
 };
 
