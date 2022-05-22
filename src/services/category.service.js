@@ -11,7 +11,7 @@ const createCategory = async (categoryBody) => {
 
 const queryCategories = async (filter, options) => {
   const categories = await Category.find().populate('animals');
-  return categories;
+  return { results: categories };
 };
 
 /**
