@@ -1,0 +1,16 @@
+[
+  {
+    "imgURL": "https://ik.imagekit.io/baks/wolf_1N1srw1H5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653231117700",
+    "enName": "Wolf",
+    "frName": "Loup",
+    "enHome": "Forest",
+    "frHome": "Foret",
+    "enFood": "meat",
+    "frFood": "steak",
+    "enReproduction": "childbirth",
+    "frReproduction": "accouchement",
+    "frWikipediaURL": "https://fr.wikipedia.org/wiki/Canis_lupus",
+    "enWikipediaURL": "https://en.wikipedia.org/wiki/Wolf",
+    "categoryId": "628a53fd5ae5469bcfd53e42"
+  }
+]
