@@ -37,7 +37,12 @@ const queryAnimals = async (filter, options, trim, lang) => {
     options
   );
   if (trim) {
-    animals = animals.map((animal) => ({ enName: animal.enName, frName: animal.frName, imgURL: animal.imgURL }));
+    animals = animals.map((animal) => ({
+      id: animal.id,
+      enName: animal.enName,
+      frName: animal.frName,
+      imgURL: animal.imgURL,
+    }));
   }
   return animals;
 };
