@@ -12,11 +12,11 @@
     "frReproduction": "accouchement",
     "frWikipediaURL": "https://fr.wikipedia.org/wiki/Canis_lupus",
     "enWikipediaURL": "https://en.wikipedia.org/wiki/Wolf",
-    "categoryId": "628a7003200cd2c684c798f2"
+    "categoryId": "628b21fdb4f57415f4c18e83"
   },
   {
     "order": 2,
-    "imgURL": "https://ik.imagekit.io/baks/wolf_1N1srw1H5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653231117700",
+    "imgURL": "https://ik.imagekit.io/baks/cow_DrVZlr47o.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653237112455",
     "enName": "Cow",
     "frName": "Vache",
     "enHome": "Farm",
@@ -27,7 +27,7 @@
     "frReproduction": "accouchement",
     "frWikipediaURL": "https://fr.wikipedia.org/wiki/Vache",
     "enWikipediaURL": "https://en.wikipedia.org/wiki/Cow",
-    "categoryId": "628a7003200cd2c684c798f2"
+    "categoryId": "628b21fdb4f57415f4c18e83"
   },
   {
     "order": 3,
@@ -42,6 +42,6 @@
     "frReproduction": "accouchement",
     "frWikipediaURL": "https://fr.wikipedia.org/wiki/Girafe",
     "enWikipediaURL": "https://en.wikipedia.org/wiki/Giraffe",
-    "categoryId": "628a7003200cd2c684c798f2"
+    "categoryId": "628b21fdb4f57415f4c18e83"
   }
 ]
