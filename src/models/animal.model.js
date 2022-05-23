@@ -74,12 +74,6 @@ const animalSchema = mongoose.Schema(
   }
 );
 
-/**
- * Check if name is taken
- * @param {string} name - The user's name
- * @param {ObjectId} [excludeUserId] - The id of the user to be excluded
- * @returns {Promise<boolean>}
- */
 animalSchema.statics.isNameTaken = async function (name, excludeUserId) {
   const category = await this.findOne({ enName: name, frName: name, _id: { $ne: excludeUserId } });
   return !!category;

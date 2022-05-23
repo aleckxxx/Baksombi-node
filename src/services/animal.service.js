@@ -2,11 +2,6 @@ const httpStatus = require('http-status');
 const { Animal } = require('../models');
 const ApiError = require('../utils/ApiError');
 
-/**
- * Create a Animal
- * @param {Object} userBody
- * @returns {Promise<Animal>}
- */
 const createAnimal = async (animalBody) => {
   if (await Animal.isNameTaken(animalBody.name)) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'animal name already taken');
@@ -47,11 +42,6 @@ const queryAnimals = async (filter, options, trim, lang) => {
   return animals;
 };
 
-/**
- * Get animal by id
- * @param {ObjectId} id
- * @returns {Promise<Animal>}
- */
 const getAnimalById = async (id) => {
   return Animal.findById(id);
 };

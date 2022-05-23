@@ -1,11 +1,6 @@
 const { Category } = require('../models');
 const { Animal } = require('../models');
 
-/**
- * Create a Category
- * @param {Object} userBody
- * @returns {Promise<Category>}
- */
 const createCategory = async (categoryBody) => {
   return Category.create(categoryBody);
 };
@@ -24,11 +19,6 @@ const queryCategories = async (filter, options) => {
   return categories;
 };
 
-/**
- * Get category by id
- * @param {ObjectId} id
- * @returns {Promise<User>}
- */
 const getCategoryById = async (id) => {
   // eslint-disable-next-line prefer-const
   // Don't know why Category.findById doesnot work
